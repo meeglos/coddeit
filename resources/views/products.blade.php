@@ -4,27 +4,17 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">Products</div>
-
-                <div class="card-body -mx-5">
-                    <div class="flex flex-wrap py-2 -m-6">
-                        @foreach ($products as $product)
-
-  {{-- <div class="w-1/3 text-gray-700 text-center bg-gray-200 m-2 px-4 py-2">{{ $product->name }}</div> --}}
-
-  {{-- <div class="flex"> --}}
-      <div class="w-1/2 m-2 px-4">
-        <div class="max-w-sm w-full lg:max-w-full lg:flex -mx-2">
-            <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('{{ $product->image }}')" title="Woman holding a mug"></div>
-            <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
-                <div class="mb-8">
-                    <p class="text-sm text-gray-600 flex items-center">
-                        <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-                                        </svg>
-                                        Members only
-                                    </p>
+            <div class="card mb-4">
+                <div class="card-header">Productos</div>
+            </div>
+            <div class="relative">
+                <div class="flex content-center flex-wrap absolute right-0 left-0 -mx-2">
+                    @foreach ($products as $product)
+                    <div class="sm:w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+                        <div class="rounded overflow-hidden shadow-lg">
+                            <img class="h-48 w-full object-cover object-top" src="{{ $product->image }}" alt="Sunset in the mountains">
+                            <div class="border-l border-r border-b border-gray-400 bg-white rounded-b p-4 flex flex-col justify-between leading-normal">
+                                <div class="mb-8">
                                     <div class="text-gray-900 font-bold text-xl mb-2">{{ $product->name }}</div>
                                     <p class="text-gray-700 text-base">{{ $product->description }}</p>
                                 </div>
@@ -38,9 +28,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                @endforeach
-            </div>
+                    @endforeach
                 </div>
             </div>
         </div>
