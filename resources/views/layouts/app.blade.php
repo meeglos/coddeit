@@ -34,6 +34,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
+                    {{-- Check /vendor/tcg/voyager/resources/views/menu/bootstrap.blade.php --}}
                     {{-- <ul class="nav navbar-nav"> --}}
                         @guest
 
