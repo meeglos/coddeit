@@ -11,4 +11,9 @@ class Product extends Model
     {
         return $this->belongsToMany(Tag::class, 'product_tags');
     }
+
+    public function getTagListAttribute()
+    {
+        return $this->tags->pluck('description'); // ->toArray()
+    }
 }
